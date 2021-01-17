@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title%></title>
+	</head>
+	<body>
+		<h2><%= title%></h2>
+		<h4>Firstname: <%= user.firstname%></h4>
+		<h4>Lastname: <%= user.lastname%></h4>
+		<h4>Email: <%= user.username%></h4>
+		<h4>Membership Status: <%= user.membership_status%></h4>
+		<hr />
+		<button><a href="<%=user.url%>/join-club">JOIN-CLUB</a></button>
+		<br />
+		<button><a href="<%=user.url%>/admin">ADMIN-ACCESS</a></button>
+		<br />
+		<button><a href="/logout">LOGOUT</a></button>
+		<br />
+		<button><a href="<%=user.url %>/create-post">CREATE-POST</a></button>
+		<br />
+		<button><a href="/">HOME</a></button>
+	</body>
+</html>

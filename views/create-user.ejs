@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<form action="" method="post">
+			<label for="firstname">Firstname: </label>
+			<input
+				type="text"
+				name="firstname"
+				required
+				value="<%= user ? user.firstname : ''%>"
+			/>
+			<br />
+			<label for="lastname">Lastname: </label>
+			<input
+				type="text"
+				name="lastname"
+				required
+				value="<%= user ? user.lastname : ''%>"
+			/>
+			<br />
+			<label for="username">Email: </label>
+			<input
+				type="email"
+				name="username"
+				required
+				value="<%= user ? user.username : ''%>"
+			/>
+			<br />
+			<label for="password">Password: </label>
+			<input type="password" name="password" required />
+			<br />
+			<label for="confirm_password">Confirm your password:</label>
+			<input type="password" name="confirm_password" required />
+			<br />
+			<button type="submit">Submit</button>
+		</form>
+		<% if(errors) {%>
+		<ul>
+			<% for(let error of errors) {%>
+			<li><%= error.msg %></li>
+			<% } %>
+		</ul>
+		<%}%>
+	</body>
+</html>
